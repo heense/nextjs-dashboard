@@ -13,7 +13,7 @@ async function seedUsers() {
     await sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
   } catch (error) {
     // Ignore error if extension already exists
-    console.log("uuid-ossp extension already exists");
+    console.log("uuid-ossp extension already exists", error);
   }
 
   await sql`
@@ -44,7 +44,7 @@ async function seedInvoices() {
     await sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
   } catch (error) {
     // Ignore error if extension already exists
-    console.log("uuid-ossp extension already exists");
+    console.log("uuid-ossp extension already exists", error);
   }
 
   await sql`
@@ -75,7 +75,7 @@ async function seedCustomers() {
     await sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
   } catch (error) {
     // Ignore error if extension already exists
-    console.log("uuid-ossp extension already exists");
+    console.log("uuid-ossp extension already exists", error);
   }
 
   await sql`
